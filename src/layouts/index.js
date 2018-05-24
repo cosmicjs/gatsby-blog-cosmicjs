@@ -101,7 +101,7 @@ class Template extends React.Component {
         <footer
           style={{
             textAlign: 'center',
-            padding: rhythm(1/4)
+            padding: `0 20px 80px 0`,
           }}
         >
           powered by&nbsp;
