@@ -8,13 +8,14 @@ import { rhythm } from '../utils/typography'
 
 class BlogIndex extends React.Component {
   render() {
-    const siteTitle = get(this, 'props.data.site.siteMetadata.title')
+    const siteTitle = get(this, 'props.data.cosmicjsSettings.metadata.site_title')
     const posts = get(this, 'props.data.allCosmicjsPosts.edges')
+    const author = get(this, 'props.data.cosmicjsSettings.metadata')
 
     return (
       <div>
         <Helmet title={siteTitle} />
-        <Bio />
+        <Bio settings={author}/>
         {posts.map(({ node }) => {
           const title = get(node, 'title') || node.slug
           return (
@@ -42,11 +43,6 @@ export default BlogIndex
 
 export const pageQuery = graphql`
   query IndexQuery {
-    site {
-      siteMetadata {
-        title
-      }
-    }
     allCosmicjsPosts(sort: { fields: [created], order: DESC }, limit: 1000) {
       edges {
         node {
@@ -56,6 +52,16 @@ export const pageQuery = graphql`
           slug
           title
           created(formatString: "DD MMMM, YYYY")
+        }
+      }
+    }
+    cosmicjsSettings(slug: {eq: "general"}){
+      metadata{
+        site_title
+        author_name
+        author_bio
+        author_avatar {
+          imgix_url
         }
       }
     }

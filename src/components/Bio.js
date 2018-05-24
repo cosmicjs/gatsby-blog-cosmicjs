@@ -4,11 +4,12 @@ import React from 'react'
 import 'typeface-montserrat'
 import 'typeface-merriweather'
 
-import avatar from './avatar.jpg'
+import avatar from './avatar.png'
 import { rhythm } from '../utils/typography'
 
 class Bio extends React.Component {
   render() {
+    const settings = this.props.settings
     return (
       <div
         style={{
@@ -17,8 +18,8 @@ class Bio extends React.Component {
         }}
       >
         <img
-          src={avatar}
-          alt={`Jazib Sawar`}
+          src={settings.author_avatar.imgix_url}
+          alt={settings.author_name}
           style={{
             marginRight: rhythm(1 / 2),
             marginBottom: 0,
@@ -26,13 +27,7 @@ class Bio extends React.Component {
             height: rhythm(2),
           }}
         />
-        <p>
-          Written by <strong>Jazib Sawar</strong> who lives in Pakistan &
-          Loves developing useful applications.{' '}
-          <a target="_blank" href="https://twitter.com/jazibsawar">
-            You should follow him on Twitter
-          </a>
-        </p>
+        <div dangerouslySetInnerHTML={{ __html: settings.author_bio }} />
       </div>
     )
   }
