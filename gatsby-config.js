@@ -1,9 +1,4 @@
 module.exports = {
-  siteMetadata: {
-    title: 'Gatsby Blog Cosmic JS',
-    author: 'Jazib Sawar',
-    description: 'A blog demonstrating what you can do using Cosmic JS & Gatsby.',
-  },
   plugins: [
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
@@ -17,10 +12,10 @@ module.exports = {
     {
       resolve: 'gatsby-source-cosmicjs',
       options: {
-        bucketSlug: 'vue-blog-cosmicjs',
-        objectTypes: ['posts'],
+        bucketSlug: 'gatsby-blog-cosmic-js',
+        objectTypes: ['posts','settings'],
         apiAccess: {
-          read_key: 'HOqPEF2pOu5j3rCrObqfptXrr7CbPXb6sFq7f1XNjsU8rGjORB',
+          read_key: '6Dx8qaSRsktk6qAIuzLHvxYMTkM1lflQCgX51sQzY4XOlMVq63',
         }
       }
     },
