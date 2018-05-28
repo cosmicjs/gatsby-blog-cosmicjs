@@ -24,7 +24,8 @@ class Template extends React.Component {
       header = (
         <div
           style={{
-            backgroundImage: `url("${homgePageHero}")`,
+            backgroundColor: "#007ACC",
+            backgroundImage: `url("${homgePageHero}?w=2000")`,
             backgroundSize: 'cover',
             backgroundPosition: 'right',
             width: '100%',
