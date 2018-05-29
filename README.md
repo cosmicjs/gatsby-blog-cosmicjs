@@ -39,6 +39,6 @@ Then
 
 ``` bash
 # Then you can run it by
-cd gatsby-example-site
+cd gatsby-example-blog
 npm run develop
 ```
