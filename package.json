@@ -13,6 +13,7 @@
     "gatsby-plugin-offline": "^1.0.15",
     "gatsby-plugin-react-helmet": "^1.0.8",
     "gatsby-plugin-typography": "^1.7.18",
+    "gatsby-source-cosmicjs": "^0.0.2",
     "gatsby-source-filesystem": "^1.5.31",
     "lodash": "^4.17.5",
     "typeface-merriweather": "0.0.43",
