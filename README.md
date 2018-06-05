@@ -1,10 +1,12 @@
-# Gatsby + Cosmic JS CMS Starter
+# Gatsby + Cosmic JS
 
 ![gatsby-blog-cosmicjs](static/thumbnail.png "The index page of the starter blog")
 
 > This repo contains an example blog website that is built with [Gatsby](https://www.gatsbyjs.org/), and [Cosmic JS](https://www.cosmicjs.com).
 
 > [See live demo hosted on Netlify](https://gatsby-blog-cosmicjs.netlify.com/)
+
+> Uses the [Cosmic JS Gatsby Source Plugin](https://www.npmjs.com/package/gatsby-source-cosmicjs)
 
 ## Prerequisites
 
@@ -20,7 +22,7 @@ npm install --global gatsby-cli
 # run from your CLI
 gatsby new gatsby-example-blog https://github.com/jazibsawar/gatsby-blog-cosmicjs
 ```
-In `gatsby-config.js` you need to add configuration for Cosmic JS bucket
+In `gatsby-config.js` you need to add configuration for your Cosmic JS Bucket
 
 ``` javascript
 {
