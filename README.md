@@ -6,6 +6,8 @@
 
 > [See live demo hosted on Netlify](https://gatsby-blog-cosmicjs.netlify.com/)
 
+> Uses the [Cosmic JS Gatsby Source Plugin](https://www.npmjs.com/package/gatsby-source-cosmicjs)
+
 ## Prerequisites
 
 - Node (I recommend using v8.2.0 or higher)
@@ -20,7 +22,7 @@ npm install --global gatsby-cli
 # run from your CLI
 gatsby new gatsby-example-blog https://github.com/jazibsawar/gatsby-blog-cosmicjs
 ```
-In `gatsby-config.js` you need to add configuration for Cosmic JS bucket
+In `gatsby-config.js` you need to add configuration for your Cosmic JS Bucket
 
 ``` javascript
 {
