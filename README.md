@@ -1,4 +1,4 @@
-# Gatsby + Cosmic JS CMS Starter
+# Gatsby + Cosmic JS
 
 ![gatsby-blog-cosmicjs](static/thumbnail.png "The index page of the starter blog")
 
