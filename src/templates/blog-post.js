@@ -1,22 +1,28 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import Link from 'gatsby-link'
+import { Link } from 'gatsby'
 import get from 'lodash/get'
+import { graphql } from 'gatsby'
 
 import Bio from '../components/Bio'
+import Layout from '../components/layout'
 import { rhythm, scale } from '../utils/typography'
-import { relative } from 'path';
 
 class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.cosmicjsPosts
-    const siteTitle = get(this.props, 'data.cosmicjsSettings.metadata.site_title')
+    const siteTitle = get(
+      this.props,
+      'data.cosmicjsSettings.metadata.site_title'
+    )
     const author = get(this, 'props.data.cosmicjsSettings.metadata')
-    const { previous, next } = this.props.pathContext
+    const location = get(this, 'props.location')
+    const { previous, next } = this.props.pageContext
 
     return (
-      <div>
-        <style>{`
+      <Layout location={location}>
+        <style>
+          {`
           .post-content {
             text-align: justify;
           }
@@ -27,8 +33,8 @@ class BlogPostTemplate extends React.Component {
           }
           @media (max-width: ${rhythm(32)}) {
             .post-hero {
-              width: calc(100% + ${rhythm((3/4) * 2)});
-              margin-left: ${rhythm(-3/4)};
+              width: calc(100% + ${rhythm((3 / 4) * 2)});
+              margin-left: ${rhythm(-3 / 4)};
               height: ${rhythm(13)};
             }
           }
@@ -40,10 +46,7 @@ class BlogPostTemplate extends React.Component {
             marginTop: rhythm(1.4),
           }}
         >
-          <Link
-            to="/">
-            ← Back to Posts
-          </Link>
+          <Link to="/">← Back to Posts</Link>
         </div>
         <h1
           style={{
@@ -65,15 +68,18 @@ class BlogPostTemplate extends React.Component {
         <div
           className="post-hero"
           style={{
-            backgroundColor: "#007ACC",
+            backgroundColor: '#007ACC',
             backgroundImage: `url("${post.metadata.hero.imgix_url}?w=2000")`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             marginBottom: rhythm(0.6),
             position: 'relative',
           }}
-        ></div>
-        <div className="post-content" dangerouslySetInnerHTML={{ __html: post.content }} />
+        />
+        <div
+          className="post-content"
+          dangerouslySetInnerHTML={{ __html: post.content }}
+        />
         <hr
           style={{
             marginBottom: rhythm(1),
@@ -92,7 +98,7 @@ class BlogPostTemplate extends React.Component {
         >
           {previous && (
             <li>
-              <Link to={previous.slug} rel="prev">
+              <Link to={`posts/${previous.slug}`} rel="prev">
                 ← {previous.title}
               </Link>
             </li>
@@ -100,13 +106,13 @@ class BlogPostTemplate extends React.Component {
 
           {next && (
             <li>
-              <Link to={next.slug} rel="next">
+              <Link to={`posts/${next.slug}`} rel="next">
                 {next.title} →
               </Link>
             </li>
           )}
         </ul>
-      </div>
+      </Layout>
     )
   }
 }
@@ -120,14 +126,14 @@ export const pageQuery = graphql`
       content
       title
       created(formatString: "MMMM DD, YYYY")
-      metadata{
-        hero{
+      metadata {
+        hero {
           imgix_url
         }
       }
     }
-    cosmicjsSettings(slug: {eq: "general"}){
-      metadata{
+    cosmicjsSettings(slug: { eq: "general" }) {
+      metadata {
         site_title
         author_name
         author_bio

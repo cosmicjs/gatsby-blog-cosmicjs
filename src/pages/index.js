@@ -1,21 +1,27 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import { Link } from 'gatsby'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
+import { graphql } from 'gatsby'
 
 import Bio from '../components/Bio'
+import Layout from '../components/layout'
 import { rhythm } from '../utils/typography'
 
 class BlogIndex extends React.Component {
   render() {
-    const siteTitle = get(this, 'props.data.cosmicjsSettings.metadata.site_title')
+    const siteTitle = get(
+      this,
+      'props.data.cosmicjsSettings.metadata.site_title'
+    )
     const posts = get(this, 'props.data.allCosmicjsPosts.edges')
     const author = get(this, 'props.data.cosmicjsSettings.metadata')
+    const location = get(this, 'props.location')
 
     return (
-      <div>
+      <Layout location={location}>
         <Helmet title={siteTitle} />
-        <Bio settings={author}/>
+        <Bio settings={author} />
         {posts.map(({ node }) => {
           const title = get(node, 'title') || node.slug
           return (
@@ -30,11 +36,13 @@ class BlogIndex extends React.Component {
                 </Link>
               </h3>
               <small>{node.created}</small>
-              <p dangerouslySetInnerHTML={{ __html: node.metadata.description }} />
+              <p
+                dangerouslySetInnerHTML={{ __html: node.metadata.description }}
+              />
             </div>
           )
         })}
-      </div>
+      </Layout>
     )
   }
 }
@@ -46,7 +54,7 @@ export const pageQuery = graphql`
     allCosmicjsPosts(sort: { fields: [created], order: DESC }, limit: 1000) {
       edges {
         node {
-          metadata{
+          metadata {
             description
           }
           slug
@@ -55,8 +63,8 @@ export const pageQuery = graphql`
         }
       }
     }
-    cosmicjsSettings(slug: {eq: "general"}){
-      metadata{
+    cosmicjsSettings(slug: { eq: "general" }) {
+      metadata {
         site_title
         author_name
         author_bio

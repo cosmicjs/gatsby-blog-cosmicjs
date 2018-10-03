@@ -1,9 +1,9 @@
-const _ = require('lodash')
+const each = require('lodash/each')
 const Promise = require('bluebird')
 const path = require('path')
 
-exports.createPages = ({ graphql, boundActionCreators }) => {
-  const { createPage } = boundActionCreators
+exports.createPages = ({ graphql, actions }) => {
+  const { createPage } = actions
   const indexPage = path.resolve('./src/pages/index.js')
   createPage({
     path: `posts`,
@@ -35,7 +35,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
         // Create blog posts pages.
         const posts = result.data.allCosmicjsPosts.edges;
 
-        _.each(posts, (post, index) => {
+        each(posts, (post, index) => {
           const next = index === posts.length - 1 ? null : posts[index + 1].node;
           const previous = index === 0 ? null : posts[index - 1].node;
 

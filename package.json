@@ -1,29 +1,33 @@
 {
   "name": "gatsby-blog-cosmicjs",
   "description": "Gatsby Blog Cosmic JS",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "author": "Jazib Sawar <jazibsawar@gmail.com>",
   "bugs": {
     "url": "https://github.com/jazibsawar/gatsby-blog-cosmicjs/issues"
   },
   "dependencies": {
-    "gatsby": "^1.9.250",
-    "gatsby-link": "^1.6.39",
-    "gatsby-plugin-google-analytics": "^1.0.29",
-    "gatsby-plugin-offline": "^1.0.15",
-    "gatsby-plugin-react-helmet": "^1.0.8",
-    "gatsby-plugin-typography": "^1.7.18",
-    "gatsby-source-cosmicjs": "^0.0.2",
-    "gatsby-source-filesystem": "^1.5.31",
-    "lodash": "^4.17.5",
-    "typeface-merriweather": "0.0.43",
-    "typeface-montserrat": "0.0.43",
+    "gatsby": "^2.0.17",
+    "gatsby-plugin-google-analytics": "^2.0.6",
+    "gatsby-plugin-offline": "^2.0.5",
+    "gatsby-plugin-react-helmet": "^3.0.0",
+    "gatsby-plugin-typography": "^2.2.0",
+    "gatsby-source-cosmicjs": "0.0.6",
+    "gatsby-source-filesystem": "^2.0.1",
+    "lodash": "^4.17.11",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "react-helmet": "^5.2.0",
+    "react-typography": "^0.16.13",
+    "typeface-merriweather": "0.0.54",
+    "typeface-montserrat": "0.0.54",
+    "typography": "^0.16.17",
     "typography-theme-wordpress-2016": "^0.15.10"
   },
   "devDependencies": {
     "eslint": "^4.19.1",
-    "eslint-plugin-react": "^7.7.0",
-    "prettier": "^1.12.0"
+    "eslint-plugin-react": "^7.11.1",
+    "prettier": "^1.14.3"
   },
   "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
   "keywords": [
