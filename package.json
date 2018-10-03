@@ -7,9 +7,7 @@
     "url": "https://github.com/jazibsawar/gatsby-blog-cosmicjs/issues"
   },
   "dependencies": {
-    "eslint": "^4.19.1",
     "gatsby": "^2.0.17",
-    "gatsby-link": "^2.0.3",
     "gatsby-plugin-google-analytics": "^2.0.6",
     "gatsby-plugin-offline": "^2.0.5",
     "gatsby-plugin-react-helmet": "^3.0.0",
@@ -27,6 +25,7 @@
     "typography-theme-wordpress-2016": "^0.15.10"
   },
   "devDependencies": {
+    "eslint": "^4.19.1",
     "eslint-plugin-react": "^7.11.1",
     "prettier": "^1.14.3"
   },
@@ -45,7 +44,7 @@
     "dev": "gatsby develop",
     "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js' 'src/**/*.md'",
+    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js' 'src/**/*.md' '*.js'",
     "develop": "gatsby develop",
     "build": "gatsby build",
     "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js"
