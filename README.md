@@ -20,7 +20,7 @@
 npm install --global gatsby-cli
 
 # run from your CLI
-gatsby new gatsby-example-blog https://github.com/jazibsawar/gatsby-blog-cosmicjs
+gatsby new gatsby-example-blog https://github.com/cosmicjs/gatsby-blog-cosmicjs
 ```
 In `gatsby-config.js` you need to add configuration for your Cosmic JS Bucket
 
