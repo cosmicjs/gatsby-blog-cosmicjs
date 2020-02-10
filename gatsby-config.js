@@ -2,6 +2,8 @@ module.exports = {
   plugins: [
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -16,7 +18,8 @@ module.exports = {
         objectTypes: ['posts','settings'],
         apiAccess: {
           read_key: process.env.COSMIC_READ_KEY,
-        }
+        },
+        localMedia: true
       }
     },
     {
