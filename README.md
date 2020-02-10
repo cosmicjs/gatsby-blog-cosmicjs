@@ -32,7 +32,8 @@ In `gatsby-config.js` you need to add configuration for your Cosmic JS Bucket
     objectTypes: ['posts', 'settings'], /* object slugs you want to populate */
     apiAccess: {
       read_key: '', /* optional */
-    }
+    },
+    localMedia: true
   }
 },
 ```
