@@ -44,3 +44,10 @@ Then
 cd gatsby-example-blog
 npm run develop
 ```
+
+## Deploy to Netlify
+You can deploy to Netlify in a few steps using thier CLI.
+```
+npm i -g netlify-cli
+netlify deploy
+```
