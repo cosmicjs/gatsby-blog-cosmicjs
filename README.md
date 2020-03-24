@@ -29,7 +29,7 @@ In `gatsby-config.js` you need to add configuration for your Cosmic JS Bucket
   resolve: 'gatsby-source-cosmicjs',
   options: {
     bucketSlug: '', /* Find this in Your Bucket > Settings > API Access after logging in at https://app.cosmicjs.com/login */
-    objectTypes: ['posts', 'settings'], /* Object slugs you want to populate */
+    objectTypes: ['posts', 'settings'], /* Object types to fetch */
     apiAccess: {
       read_key: '', /* Find this in Your Bucket > Settings > API Access after logging in at https://app.cosmicjs.com/login */
     }
