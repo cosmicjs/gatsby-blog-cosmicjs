@@ -28,12 +28,12 @@ In `gatsby-config.js` you need to add configuration for your Cosmic JS Bucket
 {
   resolve: 'gatsby-source-cosmicjs',
   options: {
-    bucketSlug: '', /* bucket slug */
-    objectTypes: ['posts', 'settings'], /* object slugs you want to populate */
+    bucketSlug: '', /* Find this in Your Bucket > Settings > Basic Settings after logging in at https://app.cosmicjs.com/login */
+    objectTypes: ['posts', 'settings'], /* Object types to fetch */
     apiAccess: {
-      read_key: '', /* optional */
+      read_key: '', /* Find this in Your Bucket > Settings > API Access after logging in at https://app.cosmicjs.com/login */
     },
-    localMedia: true
+    localMedia: true /* Optional. If you want to enable local image for Gatsby Image */
   }
 },
 ```
@@ -44,4 +44,11 @@ Then
 # Then you can run it by
 cd gatsby-example-blog
 npm run develop
+```
+
+## Deploy to Netlify
+You can deploy to Netlify in a few steps using thier CLI. Run the following commands from the root folder.
+```
+npm i -g netlify-cli
+netlify deploy
 ```
