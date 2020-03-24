@@ -3,6 +3,7 @@ import Helmet from 'react-helmet'
 import { Link } from 'gatsby'
 import get from 'lodash/get'
 import { graphql } from 'gatsby'
+import BackgroundImage from 'gatsby-background-image'
 
 import Bio from '../components/Bio'
 import Layout from '../components/layout'
@@ -65,15 +66,13 @@ class BlogPostTemplate extends React.Component {
         >
           {post.created}
         </p>
-        <div
+        <BackgroundImage
+          Tag="div"
           className="post-hero"
+          fluid={post.metadata.hero.local.childImageSharp.fluid}
+          backgroundColor={`#007ACC`}
           style={{
-            backgroundColor: '#007ACC',
-            backgroundImage: `url("${post.metadata.hero.imgix_url}?w=2000")`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
             marginBottom: rhythm(0.6),
-            position: 'relative',
           }}
         />
         <div
@@ -128,7 +127,13 @@ export const pageQuery = graphql`
       created(formatString: "MMMM DD, YYYY")
       metadata {
         hero {
-          imgix_url
+          local {
+            childImageSharp {
+              fluid(quality: 90, maxWidth: 1920) {
+                ...GatsbyImageSharpFluid_withWebp
+              }
+            }
+          }
         }
       }
     }
