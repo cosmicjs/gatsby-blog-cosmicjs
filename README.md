@@ -47,7 +47,7 @@ npm run develop
 ```
 
 ## Deploy to Netlify
-You can deploy to Netlify in a few steps using thier CLI. Run the following commands from the root folder.
+You can deploy to Netlify in a few steps using their CLI. Run the following commands from the root folder.
 ```
 npm i -g netlify-cli
 netlify deploy
