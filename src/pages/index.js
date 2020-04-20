@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import get from 'lodash/get'
-import Helmet from 'react-helmet'
+import { Helmet } from 'react-helmet'
 import { graphql } from 'gatsby'
 
 import Bio from '../components/Bio'
