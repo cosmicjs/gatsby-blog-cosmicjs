@@ -52,3 +52,10 @@ You can deploy to Netlify in a few steps using their CLI. Run the following comm
 npm i -g netlify-cli
 netlify deploy
 ```
+
+#### Set your Environment Variables in Netlify
+In the Netlify dashboard, set your environment variables located in <i>Site Settings > Build and Deploy > Environment</i>. Find your Cosmic Bucket keys located in <i>Bucket > Basic Settings</i> after <a href="https://app.cosmicjs.com/login">logging in</a>.
+```
+COSMIC_BUCKET=<your-bucket-slug>
+COSMIC_READ_KEY=<your-bucket-read-key>
+```
