@@ -46,6 +46,13 @@ cd gatsby-example-blog
 npm run develop
 ```
 
+## Enable content auto refresh
+To enable content auto refresh, open another terminal window and run the following command:
+```
+npm run poll-content
+```
+This will poll the content in your Bucket for any updates and automatically refresh it in your blog during development. Learn more about refreshing content in the [Gatsby docs](https://www.gatsbyjs.com/docs/refreshing-content/).
+
 ## Deploy to Netlify
 You can deploy to Netlify in a few steps using their CLI. Run the following commands from the root folder.
 ```
