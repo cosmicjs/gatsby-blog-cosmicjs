@@ -82,7 +82,7 @@ export default ({ children, location }) => (
         )
       } else {
         header = (
-          <h3
+          <h2
             style={{
               fontFamily: 'Montserrat, sans-serif',
               marginTop: 0,
@@ -103,7 +103,7 @@ export default ({ children, location }) => (
             >
               {siteTitle}
             </Link>
-          </h3>
+          </h2>
         )
       }
       return (
