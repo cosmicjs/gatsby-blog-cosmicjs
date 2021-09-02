@@ -3,8 +3,7 @@ import { Helmet } from 'react-helmet'
 import { Link } from 'gatsby'
 import get from 'lodash/get'
 import { graphql } from 'gatsby'
-import BackgroundImage from 'gatsby-background-image'
-
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import Bio from '../components/Bio'
 import Layout from '../components/layout'
 import { rhythm, scale } from '../utils/typography'
@@ -19,7 +18,7 @@ class BlogPostTemplate extends React.Component {
     const author = get(this, 'props.data.cosmicjsSettings.metadata')
     const location = get(this, 'props.location')
     const { previous, next } = this.props.pageContext
-
+    const heroImage = getImage(post.metadata.hero.local)
     return (
       <Layout location={location}>
         <style>
@@ -66,11 +65,9 @@ class BlogPostTemplate extends React.Component {
         >
           {post.created}
         </p>
-        <BackgroundImage
-          Tag="div"
+        <GatsbyImage
           className="post-hero"
-          fluid={post.metadata.hero.local.childImageSharp.fluid}
-          backgroundColor={`#007ACC`}
+          image={heroImage}
           style={{
             marginBottom: rhythm(0.6),
           }}
@@ -129,9 +126,7 @@ export const pageQuery = graphql`
         hero {
           local {
             childImageSharp {
-              fluid(quality: 90, maxWidth: 1920) {
-                ...GatsbyImageSharpFluid_withWebp
-              }
+              gatsbyImageData(quality: 90, layout: FULL_WIDTH)
             }
           }
         }

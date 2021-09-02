@@ -1,8 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import { StaticQuery, graphql } from 'gatsby'
-import BackgroundImage from 'gatsby-background-image'
-
+import { BgImage } from 'gbimage-bridge'
 import cosmicjsLogo from '../../static/cosmicjs.svg'
 import gatsbyLogo from '../../static/gatsby.png'
 import { rhythm, scale } from '../utils/typography'
@@ -21,9 +20,7 @@ export default ({ children, location }) => (
             homepage_hero {
               local {
                 childImageSharp {
-                  fluid(quality: 90, maxWidth: 1920) {
-                    ...GatsbyImageSharpFluid_withWebp
-                  }
+                  gatsbyImageData(quality: 90, layout: FULL_WIDTH)
                 }
               }
             }
@@ -31,10 +28,11 @@ export default ({ children, location }) => (
         }
       }
     `}
-    render={data => {
+    render={(data) => {
       const siteTitle = data.cosmicjsSettings.metadata.site_heading
       const homgePageHero =
-        data.cosmicjsSettings.metadata.homepage_hero.local.childImageSharp.fluid
+        data.cosmicjsSettings.metadata.homepage_hero.local.childImageSharp
+          .gatsbyImageData
       let header
 
       let rootPath = `/`
@@ -46,10 +44,10 @@ export default ({ children, location }) => (
 
       if (location.pathname === rootPath || location.pathname === postsPath) {
         header = (
-          <BackgroundImage
+          <BgImage
             Tag="div"
             className="post-hero"
-            fluid={homgePageHero}
+            image={homgePageHero}
             backgroundColor={`#007ACC`}
             style={{
               height: rhythm(14),
@@ -80,7 +78,7 @@ export default ({ children, location }) => (
                 {siteTitle}
               </Link>
             </h1>
-          </BackgroundImage>
+          </BgImage>
         )
       } else {
         header = (
