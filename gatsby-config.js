@@ -27,12 +27,13 @@ module.exports = {
         localMedia: true,
       },
     },
-    // { // for google analytics
-    //   resolve: `gatsby-plugin-google-analytics`,
-    //   options: {
-    //     //trackingId: `ADD YOUR TRACKING ID HERE`,
-    //   },
-    // },
+    {
+      // for google analytics
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        //trackingId: `ADD YOUR TRACKING ID HERE`,
+      },
+    },
     {
       resolve: 'gatsby-plugin-typography',
       options: {
