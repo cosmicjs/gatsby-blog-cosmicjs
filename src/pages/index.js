@@ -26,7 +26,7 @@ class BlogIndex extends React.Component {
           const title = get(node, 'title') || node.slug
           return (
             <div key={node.slug}>
-              <h3
+              <h2
                 style={{
                   marginBottom: rhythm(1 / 4),
                 }}
@@ -34,7 +34,7 @@ class BlogIndex extends React.Component {
                 <Link style={{ boxShadow: 'none' }} to={`posts/${node.slug}`}>
                   {title}
                 </Link>
-              </h3>
+              </h2>
               <small>{node.created}</small>
               <p
                 dangerouslySetInnerHTML={{ __html: node.metadata.description }}

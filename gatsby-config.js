@@ -1,4 +1,4 @@
-require("dotenv").config({
+require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 
@@ -6,6 +6,7 @@ module.exports = {
   plugins: [
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -19,14 +20,15 @@ module.exports = {
       resolve: 'gatsby-source-cosmicjs',
       options: {
         bucketSlug: process.env.COSMIC_BUCKET,
-        objectTypes: ['posts','settings'],
+        objectTypes: ['posts', 'settings'],
         apiAccess: {
           read_key: process.env.COSMIC_READ_KEY,
         },
-        localMedia: true
-      }
+        localMedia: true,
+      },
     },
     {
+      // for google analytics
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         //trackingId: `ADD YOUR TRACKING ID HERE`,
