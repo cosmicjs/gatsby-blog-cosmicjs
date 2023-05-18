@@ -63,6 +63,9 @@ export default ({ children, location }) => (
                 position: 'absolute',
                 textAlign: 'center',
                 color: '#fff',
+                background: '#340a39d1';
+                padding: '0.5em 1em';
+                border-radius: '70px';
                 left: 0,
                 right: 0,
                 top: rhythm(4),
