@@ -54,7 +54,7 @@ export default ({ children, location }) => (
             style={{
               height: rhythm(14),
               position: 'relative',
-              marginBottom: `${rhythm(1.5)}`,
+              marginBottom: '0',
             }}
           >
             <h1
