@@ -131,6 +131,8 @@ export default ({ children, location }) => (
               maxWidth: rhythm(24),
               padding: `0 ${rhythm(3 / 4)} ${rhythm(1.5)} ${rhythm(3 / 4)}`,
               minHeight: 'calc(100vh - 42px)',
+              marginTop: '2rem',
+              background: '#c8d0e7',
             }}
           >
             {children}
