@@ -64,13 +64,14 @@ export default ({ children, location }) => (
                 textAlign: 'center',
                 color: '#fff',
                 background: 'rgba(52, 10, 57, 0.82)',
-                padding: '0.5em 1em',
                 borderRadius: '70px',
                 left: 0,
                 right: 0,
                 top: rhythm(4),
-                marginTop: '0',
-                height: rhythm(2.5),
+                margin: 'auto',
+                width: '620px',
+                height: '6rem',
+                line-height: '6rem',
               }}
             >
               <Link
