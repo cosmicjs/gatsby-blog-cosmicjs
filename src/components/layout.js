@@ -145,7 +145,7 @@ export default ({ children, location }) => (
             >
               <strong>Twitter</strong>
             </a>
-            &nbsp;
+             &nbsp;|&nbsp;
             <a
               target="_blank"
               href="https://www.linkedin.com/in/sagarsinha1/"
@@ -156,7 +156,7 @@ export default ({ children, location }) => (
             >
               <strong>Linkedin</strong>
             </a>
-            &nbsp;
+            &nbsp;|&nbsp;
             <a
               target="_blank"
               href="https://github.com/sinhasagar01"
