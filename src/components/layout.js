@@ -71,7 +71,7 @@ export default ({ children, location }) => (
                 margin: 'auto',
                 width: '620px',
                 height: '6rem',
-                line-height: '6rem',
+                lineHeight: '6rem',
               }}
             >
               <Link
