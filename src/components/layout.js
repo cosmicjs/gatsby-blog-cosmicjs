@@ -65,7 +65,7 @@ export default ({ children, location }) => (
                 color: '#fff',
                 background: 'rgba(52, 10, 57, 0.82)',
                 padding: '0.5em 1em',
-                border-radius: '70px',
+                borderRadius: '70px',
                 left: 0,
                 right: 0,
                 top: rhythm(4),
