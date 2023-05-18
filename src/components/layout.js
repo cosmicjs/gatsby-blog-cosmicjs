@@ -8,7 +8,7 @@ import gatsbyLogo from '../../static/gatsby.png'
 import { rhythm, scale } from '../utils/typography'
 
 // Import typefaces
-import 'typeface-montserrat'
+import 'typeface-ibm-plex-sans'
 import 'typeface-merriweather'
 
 export default ({ children, location }) => (
@@ -91,7 +91,7 @@ export default ({ children, location }) => (
         header = (
           <h3
             style={{
-              fontFamily: 'Montserrat, sans-serif',
+              fontFamily: 'IBM Plex Sans, sans-serif',
               marginTop: 0,
               marginBottom: rhythm(-1),
               marginLeft: 'auto',
