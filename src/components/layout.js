@@ -124,7 +124,7 @@ export default ({ children, location }) => (
       return (
         <div
           style={{
-              background: '#c8d0e7',
+              background: '#E4EBF5',
           }}
         >
           {header}
