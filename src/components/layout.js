@@ -59,7 +59,7 @@ export default ({ children, location }) => (
           >
             <h1
               style={{
-                ...scale(1.3),
+                fontSize: '2rem',
                 position: 'absolute',
                 textAlign: 'center',
                 color: '#fff',
@@ -69,9 +69,9 @@ export default ({ children, location }) => (
                 right: 0,
                 top: rhythm(4),
                 margin: 'auto',
-                width: '620px',
-                height: '6rem',
-                lineHeight: '6rem',
+                maxWidth: '420px',
+                height: '5rem',
+                lineHeight: '5rem',
               }}
             >
               <Link
@@ -102,6 +102,10 @@ export default ({ children, location }) => (
               marginRight: 'auto',
               maxWidth: rhythm(24),
               paddingTop: `${rhythm(1.5)}`,
+              backgroundImage: 'linear-gradient( 90deg, #ff006e, #8338ec, #3a86ff )',
+              WebkitBackgroundClip: 'text',
+              backgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
             }}
           >
             <Link
