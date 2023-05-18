@@ -58,7 +58,7 @@ class BlogIndex extends React.Component {
                </small>
               <p
                 style={{
-                  color: '##77829f',
+                  color: '#77829f',
                   marginTop: '1rem',
                   marginBottom: '0rem',
                 }}
