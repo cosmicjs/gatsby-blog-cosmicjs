@@ -8,6 +8,11 @@ export default ({ settings }) => (
       marginBottom: rhythm(2.5),
     }}
   >
+
+    <div dangerouslySetInnerHTML={{ __html: settings.author_bio }} />
+  </div>
+)
+
 //     <img
 //       src={settings.author_avatar.imgix_url}
 //       alt={settings.author_name}
@@ -19,6 +24,3 @@ export default ({ settings }) => (
 //         borderRadius: '35px',
 //       }}
 //     />
-    <div dangerouslySetInnerHTML={{ __html: settings.author_bio }} />
-  </div>
-)
