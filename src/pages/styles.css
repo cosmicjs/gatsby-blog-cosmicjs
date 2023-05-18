@@ -1,1 +1,12 @@
 
+a {
+    box-shadow: none;
+    color: #5b0eeb;
+    text-decoration: none;
+}
+p {
+  color: #7884a1;
+}
+small {
+  color: #9baacf;
+}
