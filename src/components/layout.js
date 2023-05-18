@@ -152,12 +152,7 @@ export default ({ children, location }) => (
               target="_blank"
               href="https://twitter.com/sinhasagar01"
               style={{
-                color: '#007acc',
-                boxShadow: 'none',
-                backgroundImage: 'linear-gradient( 90deg, #ff006e, #8338ec, #3a86ff )',
-                WebkitBackgroundClip: 'text',
-                backgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
+                color: '#5b0eeb',
               }}
             >
               <strong>Twitter</strong>
@@ -167,12 +162,7 @@ export default ({ children, location }) => (
               target="_blank"
               href="https://www.linkedin.com/in/sagarsinha1/"
               style={{
-                color: '#007acc',
-                boxShadow: 'none',
-                backgroundImage: 'linear-gradient( 90deg, #ff006e, #8338ec, #3a86ff )',
-                WebkitBackgroundClip: 'text',
-                backgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
+                color: '#5b0eeb',
               }}
             >
               <strong>Linkedin</strong>
@@ -182,12 +172,7 @@ export default ({ children, location }) => (
               target="_blank"
               href="https://github.com/sinhasagar01"
               style={{
-                color: '#007acc',
-                boxShadow: 'none',
-                backgroundImage: 'linear-gradient( 90deg, #ff006e, #8338ec, #3a86ff )',
-                WebkitBackgroundClip: 'text',
-                backgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
+                color: '#5b0eeb',
               }}
             >
               <strong>GitHub</strong>
