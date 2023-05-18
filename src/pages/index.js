@@ -29,7 +29,7 @@ class BlogIndex extends React.Component {
                 style={{
                   borderRadius: '20px',
                   padding: '2rem',
-                  boxShadow: '0.8rem 0.8rem 1.4rem #c8d0e7, -0.2rem -0.2rem 1.8rem #fffff',
+                  boxShadow: '0.8rem 0.8rem 1.4rem #c8d0e7, -0.2rem -0.2rem 1.8rem #ffffff',
                   marginBottom: '2rem',
                 }}
             >
