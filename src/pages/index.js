@@ -19,7 +19,7 @@ class BlogIndex extends React.Component {
     const location = get(this, 'props.location')
 
     return (
-      <Layout location={location}>
+      <Layout location={location} style={{ background: '#c8d0e7', }}>
         <Helmet title={siteTitle} />
         <Bio settings={author} />
         {posts.map(({ node }) => {
