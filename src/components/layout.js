@@ -63,7 +63,7 @@ export default ({ children, location }) => (
                 position: 'absolute',
                 textAlign: 'center',
                 color: '#fff',
-                background: 'rgba(52, 10, 57, 0.82)',
+                background: 'rgba(255, 255, 255, 0.8)',
                 borderRadius: '70px',
                 left: 0,
                 right: 0,
@@ -79,6 +79,10 @@ export default ({ children, location }) => (
                   boxShadow: 'none',
                   textDecoration: 'none',
                   color: 'inherit',
+                  backgroundImage: 'linear-gradient( 90deg, #ff006e, #8338ec, #3a86ff )',
+                  -webkitBackgroundClip: 'text',
+                  backgroundClip: 'text',
+                  -webkitTextFillColor: 'transparent',
                 }}
                 to={'/'}
               >
