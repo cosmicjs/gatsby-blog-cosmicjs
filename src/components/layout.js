@@ -72,10 +72,6 @@ export default ({ children, location }) => (
                 maxWidth: '420px',
                 height: '5rem',
                 lineHeight: '5rem',
-                backgroundImage: 'linear-gradient( 90deg, #ff006e, #8338ec, #3a86ff )',
-                WebkitBackgroundClip: 'text',
-                backgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
               }}
             >
               <Link
