@@ -37,7 +37,7 @@ class BlogIndex extends React.Component {
               <h3
                 style={{
                   marginBottom: rhythm(1 / 4),
-                  marginTop: '1rem',
+                  marginTop: '0rem',
                   backgroundImage: 'linear-gradient( 90deg, #ff006e, #8338ec, #3a86ff )',
                   WebkitBackgroundClip: 'text',
                   backgroundClip: 'text',
@@ -48,8 +48,19 @@ class BlogIndex extends React.Component {
                   {title}
                 
               </h3>
-              <small>{node.created}</small>
+              <small 
+                style={{
+                  color: '#9baacf',
+                }}
+              >
+                {node.created}
+               </small>
               <p
+                style={{
+                  color: '##77829f',
+                  marginTop: '1rem',
+                  marginBottom: '0rem',
+                }}
                 dangerouslySetInnerHTML={{ __html: node.metadata.description }}
               />
             </div>
