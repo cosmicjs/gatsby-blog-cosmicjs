@@ -133,43 +133,39 @@ export default ({ children, location }) => (
               padding: `0 20px 80px 0`,
             }}
           >
-            powered by&nbsp;
+            © Copyright 2023 Sagar Kumar Shrivastava&nbsp;
+            <br>
             <a
               target="_blank"
-              href="https://gatsbyjs.org"
+              href="https://twitter.com/sinhasagar01"
               style={{
-                color: '#191919',
+                color: '#007acc',
                 boxShadow: 'none',
               }}
             >
-              <img
-                src={gatsbyLogo}
-                alt="Gatsby JS"
-                style={{
-                  width: '20px',
-                  margin: '0 4px -3px 2px',
-                }}
-              />
-              <strong>Gatsby</strong>
+              <strong>Twitter</strong>
             </a>
             &nbsp;and&nbsp;
             <a
               target="_blank"
-              href="https://cosmicjs.com"
+              href="https://www.linkedin.com/in/sagarsinha1/"
               style={{
-                color: '#191919',
+                color: '#007acc',
                 boxShadow: 'none',
               }}
             >
-              <img
-                src={cosmicjsLogo}
-                alt="Cosmic JS"
-                style={{
-                  width: '18px',
-                  margin: '0 4px -2px 5px',
-                }}
-              />
-              <strong>Cosmic JS</strong>
+              <strong>Linkedin</strong>
+            </a>
+            &nbsp;and&nbsp;
+            <a
+              target="_blank"
+              href="https://github.com/sinhasagar01"
+              style={{
+                color: '#007acc',
+                boxShadow: 'none',
+              }}
+            >
+              <strong>GitHub</strong>
             </a>
           </footer>
         </div>
