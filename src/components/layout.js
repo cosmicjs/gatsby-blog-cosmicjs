@@ -80,9 +80,9 @@ export default ({ children, location }) => (
                   textDecoration: 'none',
                   color: 'inherit',
                   backgroundImage: 'linear-gradient( 90deg, #ff006e, #8338ec, #3a86ff )',
-                  -webkitBackgroundClip: 'text',
+                  webkitBackgroundClip: 'text',
                   backgroundClip: 'text',
-                  -webkitTextFillColor: 'transparent',
+                  webkitTextFillColor: 'transparent',
                 }}
                 to={'/'}
               >
