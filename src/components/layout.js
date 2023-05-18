@@ -134,7 +134,7 @@ export default ({ children, location }) => (
             }}
           >
             © Copyright 2023 Sagar Kumar Shrivastava&nbsp;
-            <br>
+            <br></br>
             <a
               target="_blank"
               href="https://twitter.com/sinhasagar01"
