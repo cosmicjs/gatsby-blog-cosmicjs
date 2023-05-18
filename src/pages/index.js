@@ -19,7 +19,7 @@ class BlogIndex extends React.Component {
     const location = get(this, 'props.location')
 
     return (
-      <Layout location={location} style={{ background: '#c8d0e7', }}>
+      <Layout location={location}>
         <Helmet title={siteTitle} />
         <Bio settings={author} />
         {posts.map(({ node }) => {
@@ -36,6 +36,7 @@ class BlogIndex extends React.Component {
               <h3
                 style={{
                   marginBottom: rhythm(1 / 4),
+                  marginTop: '1rem',
                   backgroundImage: 'linear-gradient( 90deg, #ff006e, #8338ec, #3a86ff )',
                   WebkitBackgroundClip: 'text',
                   backgroundClip: 'text',
